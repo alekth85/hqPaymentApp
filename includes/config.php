@@ -12,7 +12,7 @@ DEFINE('APP_URL', 'http://lb.geek.rs.ba/paypal/');
 
 DEFINE('LISTURL', APP_URL . 'list.php');
 
-require_once __DIR__  . '/../../vendor/autoload.php';
+require_once __DIR__  . '/../vendor/autoload.php';
 
 // Paypal settings, init
 DEFINE('PAYPAL_API_KEY', 'AZwXvTtt5oN9guGnoAAGWs1OgS8Zcec9bFDUXMXfvYAZ0Yjt5byTZ1rIjXbe6Wf8NBVpd_ZM8gEWGO7F');
