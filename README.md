@@ -3,6 +3,10 @@
 This is a test application that utilizes BrainTreePayments and Paypal payment SDKs.
 
 There is no installation, no sql schema files (due to the fact it's using sqllite3 as database backend), no anything.
+The reason sqllite is used is because I wanted to make it easier for you to set this up. So no database db/user creation, import of initial schema etc.
+Schema is programmatically set from class.Database.php file. For your convenience.
+
+I normally use MySQL or PostgreSQL myself, and sqllite for really small projects that don't require large RDBMS, such as this.
 
 Setup instructions:
 
@@ -12,8 +16,8 @@ Setup instructions:
 2. cd /var/www/html/hq
 3. git clone https://github.com/alekth85/hqPaymentApp.git
 4. cd hqPaymentApp
-5. php /path/to/composer.phar install (this will install all things needed for the app to work)
-6. edit /var/www/html/hqPaymentApp/includes/config.php (only APP_DIR and APP_URL are needed to change)
+5. php /path/to/composer.phar install (this will install all things needed for the app to work, and obviously you'll need composer. https://getcomposer.org/download/ )
+6. edit includes/config.php (only APP_DIR and APP_URL are needed to change)
 7. Install php sqllite package, ubuntu/debian: apt-get install php7.0-sqlite3
 8. Make sure db/hq.db is correct permissions. For the sake of this test, chmod -R 777 db/ should be fine. Note: Chmod to 777 is bad, every time. Same as laziness.
 
