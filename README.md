@@ -8,8 +8,8 @@ Setup instructions:
 
 ( These instructions assume your root for the app will be in /var/www/html/hq, and once downloaded, the app will be /var/www/html/hq/hqPaymentApp )
 
-1. mkdir -p /var/www/html
-2. cd /var/www/html
+1. mkdir -p /var/www/html/hq
+2. cd /var/www/html/hq
 3. git clone https://github.com/alekth85/hqPaymentApp.git
 4. cd hqPaymentApp
 5. php /path/to/composer.phar install (this will install all things needed for the app to work)
