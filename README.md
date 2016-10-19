@@ -61,3 +61,24 @@ It's a proof of concept, that is, not a production app.
 If you having trouble running this app, check the logs of course. It will say what's wrong in there.
 Most probable cause of having a problem is some prerequisites are not installed (such as php-sqllite package), wrong permissions or wrong path configuration.
 Logs will help you clear the problem.
+
+# Bonus Question / Answer:
+
+Question: How would you handle security for saving credit cards?
+
+Answer:
+
+Generic answer would be to implement and follow PCI-DSS standard, outline can be seen here:
+https://en.wikipedia.org/wiki/Payment_Card_Industry_Data_Security_Standard
+
+More specific answer, as in, actual storing CC data in the DB and how to do it securely, is encryption. Here's one way.
+Encrypting CC numbers with a secure alghorithm, such as AES with an key.
+As you may need the data again, you need a way to decrypt it, that's what key is used for. Key needs to be rotated, reasonable is every 3 months.
+After 3 months, when the new key is generated, the new data is encrypted with it, while the old is still with the old key. This means
+you have to store the new and the old keys for certain amount of time.
+
+These keys also needs to be protected with one encryption key.
+
+Storage and usage of these keys depend on general system implementation and architecture, but it's a common sense that they would not be stored
+anywhere near the server that holds encrypted CC data, and access to them strictly regulated and monitored.
+
