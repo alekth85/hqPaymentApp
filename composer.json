@@ -1,0 +1,7 @@
+{
+    "require": {
+        "paypal/rest-api-sdk-php": "*",
+        "braintree/braintree_php": "3.16.0",
+		"phpunit/phpunit": "4.8.*"
+    }
+}

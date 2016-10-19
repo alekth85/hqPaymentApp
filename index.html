@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>HQ Payment Test</title>
+        <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+        <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-form-validator/2.3.26/jquery.form-validator.min.js"></script>
+    </head>
+    
+    <body>
+        <form action="/paypal/pay.php" method="post">
+            Price: <input data-validation="number" data-validation-allowing="float" type="text" name="price" value="12"> <br>
+            Currency: <select name="currency">
+                <option>USD</option>
+                <option>EUR</option>
+                <option>THB</option>
+                <option>HKD</option>
+                <option>SGD</option>
+                <option>AUD</option>
+            </select> <br />
+            
+            Full Name: <input data-validation="length" data-validation-length="2-64" type="text" name="fullname" value="John Smith"> <br /> <br />
+            
+            CC Holder Name: <input data-validation="length" data-validation-length="2-64" type="text" name="ccfullname" value="John Smith"><br />
+            CC Type:
+            <select name="cctype">
+                <option>visa</option>
+                <option>mastercard</option>
+                <option>AmEX</option>
+            </select> <br />
+            CC Number: <input data-validation="number" type="text" name="ccnumber" value="4996083535460392"> (warning: check https://developers.braintreepayments.com/reference/general/testing/python#credit-card-numbers if testing braintree)<br />
+            CC Expire: <input type="text" name="ccexpire" value="12/2017"><br />
+            CC CVV2: <input data-validation="number" type="text" name="cccvv2" value="865"> <br /> <br />
+            <input type="submit" value="Go">
+            
+        </form>
+        <script>
+            $.validate({
+                lang: 'en'
+            });
+        </script>
+    </body>
+</html>
