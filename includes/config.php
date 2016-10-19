@@ -7,7 +7,7 @@
 */
 
 // APP Settings
-DEFINE('APP_DIR', '/sites/lb.geek.rs.ba/htdocs/paypal/');
+DEFINE('APP_DIR', '/sites/lb.geek.rs.ba/htdocs/paypal/'); // Put trailing slash
 DEFINE('APP_URL', 'http://lb.geek.rs.ba/paypal/');
 
 DEFINE('LISTURL', APP_URL . 'list.php');
