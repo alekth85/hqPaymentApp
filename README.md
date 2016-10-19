@@ -4,9 +4,9 @@ This is a test application that utilizes BrainTreePayments and Paypal payment SD
 
 There is no installation, no sql schema files (due to the fact it's using sqllite3 as database backend), no anything.
 
-Installation instructions:
+Setup instructions:
 
-( These instructions assume your root for the app will be in /var/www/html, and once downloaded, the app will be /var/www/html/hqPaymentApp )
+( These instructions assume your root for the app will be in /var/www/html/hq, and once downloaded, the app will be /var/www/html/hq/hqPaymentApp )
 
 1. mkdir -p /var/www/html
 2. cd /var/www/html
