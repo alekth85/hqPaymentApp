@@ -59,8 +59,6 @@ Braintree_Configuration::merchantId('rs6z732vrjjxjnj7');
 Braintree_Configuration::publicKey('g59v8yd5fxq4cbp2');
 Braintree_Configuration::privateKey('1293c6f38713dc9567183089f6134fe8');
 
-session_start();
-
 require_once APP_DIR . 'includes/class.payments.php';
 
 // Payment classes.
